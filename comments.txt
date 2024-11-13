@@ -24,3 +24,17 @@ touch esp32_a.js
 
 npm init --y
 npm install mqtt
+
+
+mosquitto_sub -h localhost -p 1883 -t sensor/esp32/a
+
+
+docker exec -it influxdb-server influx
+show databases
+create database myhome
+show retention policies on myhome 
+CREATE RETENTION POLICY "ninety_day_only"
+            ON "myhome" DURATION 90d
+            REPLICATION 1 DEFAULT
+ALTER RETENTION POLICY "ninety_day_only"
+    ON "myhome" DEFAULT
