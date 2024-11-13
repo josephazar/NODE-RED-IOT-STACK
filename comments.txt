@@ -1,0 +1,12 @@
+node -v
+nvm install 20
+nvm use 20
+
+docker ps (make sure you run docker desktop in case you use it)
+
+touch docker-compose.yml
+touch mosquitto.conf
+
+
+docker compose up -d 
+docker-compose up -d
