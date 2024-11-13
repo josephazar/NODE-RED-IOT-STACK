@@ -10,3 +10,17 @@ touch mosquitto.conf
 
 docker compose up -d 
 docker-compose up -d
+docker compose down
+
+
+docker network ls
+docker network inspect node-red_default
+docker ps
+
+Nodered: localhost:1880
+Grafana: localhost:3000 ==> admin/admin
+
+touch esp32_a.js
+
+npm init --y
+npm install mqtt
