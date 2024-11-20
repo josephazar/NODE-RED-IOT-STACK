@@ -38,3 +38,12 @@ CREATE RETENTION POLICY "ninety_day_only"
             REPLICATION 1 DEFAULT
 ALTER RETENTION POLICY "ninety_day_only"
     ON "myhome" DEFAULT
+
+use myhome
+select * from <measurement>
+
+
+
+
+Create a simulator to subscribe to NodeRED MQTT 
+touch esp32_b_subscriber.js
